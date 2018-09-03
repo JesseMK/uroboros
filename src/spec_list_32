@@ -1,0 +1,12 @@
+bzip2_base.i386-m32-gcc42-nn
+gobmk_base.i386-m32-gcc42-nn
+hmmer_base.i386-m32-gcc42-nn
+libquantum_base.i386-m32-gcc42-nn 
+milc_base.i386-m32-gcc42-nn
+sjeng_base.i386-m32-gcc42-nn
+gcc_base.i386-m32-gcc42-nn
+h264ref_base.i386-m32-gcc42-nn
+lbm_base.i386-m32-gcc42-nn
+mcf_base.i386-m32-gcc42-nn
+perlbench_base.i386-m32-gcc42-nn
+sphinx_livepretend_base.i386-m32-gcc42-nn
