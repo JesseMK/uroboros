@@ -47,30 +47,30 @@ config_x86 = 'test_32.cfg'
 os.system('cd ~/spec_2006/SPEC_CPU2006v1.0 && source ./shrc && cd $OLDPWD')
 
 # x64 Loop
-with open("spec_list_64") as f:
-    lines = f.readlines()
+# with open("spec_list_64") as f:
+#     lines = f.readlines()
 
-for l in lines:
-    file_name = l.strip()
-    option = ""
-    if file_name in a3_set:
-        option += " -a 3"
-    if file_name in a2_set:
-        option += " -a 2"
+# for l in lines:
+#     file_name = l.strip()
+#     option = ""
+#     if file_name in a3_set:
+#         option += " -a 3"
+#     if file_name in a2_set:
+#         option += " -a 2"
 
-    print '--------------', file_name, '------------------------'
-    sys.stdout.flush()
-    print run_uroboros.format(exe_path.format(
-        exe_folder[file_name[:-19]], file_name), ori_path_64.format(file_name), option)
-    os.system(run_uroboros.format(exe_path.format(
-        exe_folder[file_name[:-19]], file_name), ori_path_64.format(file_name), option))
-    print '-----------------------------------------------------'
-    sys.stdout.flush()
+#     print '--------------', file_name, '------------------------'
+#     sys.stdout.flush()
+#     print run_uroboros.format(exe_path.format(
+#         exe_folder[file_name[:-19]], file_name), ori_path_64.format(file_name), option)
+#     os.system(run_uroboros.format(exe_path.format(
+#         exe_folder[file_name[:-19]], file_name), ori_path_64.format(file_name), option))
+#     print '-----------------------------------------------------'
+#     sys.stdout.flush()
 
-raw_input(run_spec.format(config_x64, all_benchmark))
-os.system(run_spec.format(config_x64, all_benchmark))
+# raw_input(run_spec.format(config_x64, all_benchmark))
+# os.system(run_spec.format(config_x64, all_benchmark))
 
-raw_input()
+# raw_input()
 
 # x86 Loop
 with open("spec_list_32") as f:
@@ -87,9 +87,9 @@ for l in lines:
     print '--------------', file_name, '------------------------'
     sys.stdout.flush()
     print run_uroboros.format(exe_path.format(
-        exe_folder[file_name[:-19]], file_name), ori_path_32.format(file_name), option)
+        exe_folder[file_name[:-23]], file_name), ori_path_32.format(file_name), option)
     os.system(run_uroboros.format(exe_path.format(
-        exe_folder[file_name[:-19]], file_name), ori_path_32.format(file_name), option))
+        exe_folder[file_name[:-23]], file_name), ori_path_32.format(file_name), option))
     print '-----------------------------------------------------'
     sys.stdout.flush()
 
