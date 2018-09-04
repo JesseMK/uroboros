@@ -39,7 +39,7 @@ run_spec = 'runspec --config={0} --size=test --iterations=1 {1}'
 config_x64 = 'test_64.cfg'
 config_x86 = 'test_32.cfg'
 
-os.system('source ~/spec_2006/SPEC_CPU2006v1.0/shrc')
+os.system('cd ~/spec_2006/SPEC_CPU2006v1.0 && source shrc && cd $OLDPWD')
 
 # x64 Loop
 with open("spec_list_64") as f:
