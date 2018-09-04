@@ -25,6 +25,11 @@ exe_folder = {
     'sphinx_livepretend_base': '482.sphinx3'
 }
 
+all_benchmark = ''
+
+for benchmark in exe_folder:
+    all_benchmark += exe_folder[benchmark][4:] + ' '
+
 exe_path = '~/spec_2006/SPEC_CPU2006v1.0/benchspec/CPU2006/{0}/exe/{1}'
 
 a3_set = {'h264ref_base.i386-m32-gcc42-nn', 'gcc_base.i386-m32-gcc42-nn', 'gobmk_base.i386-m32-gcc42-nn',
@@ -59,11 +64,11 @@ for l in lines:
         exe_folder[file_name[:-19]], file_name), ori_path_64.format(file_name), option)
     os.system(run_uroboros.format(exe_path.format(
         exe_folder[file_name[:-19]], file_name), ori_path_64.format(file_name), option))
-    raw_input(run_spec.format(config_x64, file_name[:-24]))
-    os.system(run_spec.format(config_x64, file_name[:-24]))
     print '-----------------------------------------------------'
     sys.stdout.flush()
 
+raw_input(run_spec.format(config_x64, all_benchmark))
+os.system(run_spec.format(config_x64, all_benchmark))
 
 raw_input()
 
@@ -85,8 +90,9 @@ for l in lines:
         exe_folder[file_name[:-19]], file_name), ori_path_32.format(file_name), option)
     os.system(run_uroboros.format(exe_path.format(
         exe_folder[file_name[:-19]], file_name), ori_path_32.format(file_name), option))
-    raw_input(run_spec.format(config_x86, file_name[:-19]))
-    os.system(run_spec.format(config_x86, file_name[:-19]))
     print '-----------------------------------------------------'
     sys.stdout.flush()
+
+raw_input(run_spec.format(config_x86, all_benchmark))
+os.system(run_spec.format(config_x86, all_benchmark))
 
