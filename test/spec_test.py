@@ -44,7 +44,7 @@ run_uroboros = "python ./../src/uroboros.py -o {0} {1} {2}"
 config_spec = 'cd ~/spec_2006/SPEC_CPU2006v1.0 && source ./shrc && cd $OLDPWD'
 # run_spec = 'runspec --config={0} --size=test,train,ref --noreportable --tune=base --iterations=1 {1}'
 run_spec = config_spec + \
-    ' && runspec --config={0} --size=test --iterations=1 {1}'
+    ' && runspec --config={0} --size=test --nobuild --iterations=1 {1}'
 
 config_x64 = 'test_64.cfg'
 config_x86 = 'test_32.cfg'
