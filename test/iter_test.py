@@ -21,5 +21,4 @@ for l in lines:
 os.system("rm ~/coreutils/coreutils-8.15-32/src_new/stdbuf")
 os.system("mv ~/coreutils/coreutils-8.15-32/src_new/test_bin ~/coreutils/coreutils-8.15-32/src_new/test")
 os.system("cp ~/coreutils/coreutils-8.15-32/src_new/*  ~/coreutils/coreutils-8.15-32/src/")
-os.system("cd ~/coreutils/coreutils-8.15-32/")
-os.system("make check")
+os.system("cd ~/coreutils/coreutils-8.15-32/ && make check")
